@@ -22,12 +22,7 @@
 				core1 {
 					cpu = <&CPU5>;
 				};
-				core2 {
-					cpu = <&CPU6>;
-				};
-				core3 {
-					cpu = <&CPU7>;
-				};
+				
 			};
 
 			cluster1 {
@@ -110,23 +105,6 @@
 			next-level-cache = <&L2_0>;
 		};
 
-		CPU6: cpu@2 {
-			device_type = "cpu";
-			compatible = "arm,cortex-a53";
-			reg = <0x2>;
-			enable-method = "qcom,arm-cortex-acc";
-			qcom,acc = <&acc6>;
-			next-level-cache = <&L2_0>;
-		};
-
-		CPU7: cpu@3 {
-			device_type = "cpu";
-			compatible = "arm,cortex-a53";
-			reg = <0x3>;
-			enable-method = "qcom,arm-cortex-acc";
-			qcom,acc = <&acc7>;
-			next-level-cache = <&L2_0>;
-		};
 	};
 };
 
@@ -171,13 +149,4 @@
 		reg = <0x0b198000 0x1000>;
 	};
 
-	acc6:clock-controller@b1a8000 {
-		compatible = "qcom,arm-cortex-acc";
-		reg = <0x0b1a8000 0x1000>;
-	};
-
-	acc7:clock-controller@b1b8000 {
-		compatible = "qcom,arm-cortex-acc";
-		reg = <0x0b1b8000 0x1000>;
-	};
 };
