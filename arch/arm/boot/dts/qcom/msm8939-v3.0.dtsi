@@ -383,6 +383,31 @@
 		qcom,coresight-jtagmm-cpu = <&CPU1>;
 	};
 
+	jtag_mm2: jtagmm@8fe000 {
+		compatible = "qcom,jtagv8-mm";
+		reg = <0x8fe000 0x1000>,
+		      <0x8f4000 0x1000>;
+		reg-names = "etm-base", "debug-base";
+
+		clocks = <&clock_rpm clk_qdss_clk>,
+		         <&clock_rpm clk_qdss_a_clk>;
+		clock-names = "core_clk", "core_a_clk";
+
+		qcom,coresight-jtagmm-cpu = <&CPU2>;
+	};
+
+	jtag_mm3: jtagmm@8ff000 {
+		compatible = "qcom,jtagv8-mm";
+		reg = <0x8ff000 0x1000>,
+		      <0x8f6000 0x1000>;
+		reg-names = "etm-base", "debug-base";
+
+		clocks = <&clock_rpm clk_qdss_clk>,
+		         <&clock_rpm clk_qdss_a_clk>;
+		clock-names = "core_clk", "core_a_clk";
+
+		qcom,coresight-jtagmm-cpu = <&CPU3>;
+	};
 
 	jtag_mm4: jtagmm@8dc000 {
 		compatible = "qcom,jtagv8-mm";

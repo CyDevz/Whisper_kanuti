@@ -78,7 +78,9 @@
 			<  800000000 9>,
 			<  960000000 12>,
 			< 1113600000 14>,
-			< 1344000000 17>;
+			< 1344000000 17>,
+			< 1459200000 20>,
+			< 1497600000 21>;
 
 		qcom,speed0-bin-v0-cci =
 			<          0 0>,
@@ -101,8 +103,9 @@
 			<  800000000 9>,
 			<  960000000 12>,
 			< 1113600000 14>,
-			< 1344000000 17>;
-
+			< 1344000000 17>,
+			< 1459200000 20>,
+			< 1497600000 21>;
 
 		qcom,speed2-bin-v0-cci =
 			<          0 0>,
@@ -125,8 +128,8 @@
 			<  800000000 9>,
 			<  960000000 12>,
 			< 1113600000 14>,
-			< 1344000000 17>;
-
+			< 1344000000 17>,
+			< 1459200000 20>;
 
 		qcom,speed2-bin-v2-cci =
 			<          0 0>,
@@ -149,7 +152,10 @@
 			<  800000000 9>,
 			<  960000000 12>,
 			< 1113600000 14>,
-			< 1344000000 17>;
+			< 1344000000 17>,
+			< 1459200000 20>,
+			< 1497600000 21>,
+			< 1651200000 26>;
 
 		qcom,speed4-bin-v0-cci =
 			<          0 0>,
@@ -172,8 +178,10 @@
 			<  800000000 9>,
 			<  960000000 12>,
 			< 1113600000 14>,
-			< 1344000000 17>;
-
+			< 1344000000 17>,
+			< 1459200000 20>,
+			< 1497600000 21>,
+			< 1651200000 26>;
 
 		qcom,speed5-bin-v0-cci =
 			<          0 0>,
@@ -196,8 +204,10 @@
 			<  800000000 9>,
 			<  960000000 12>,
 			< 1113600000 14>,
-			< 1344000000 17>;
-
+			< 1344000000 17>,
+			< 1459200000 20>,
+			< 1497600000 21>,
+			< 1651200000 26>;
 
 		qcom,speed5-bin-v6-cci =
 			<          0 0>,
@@ -398,6 +408,31 @@
 		qcom,coresight-jtagmm-cpu = <&CPU1>;
 	};
 
+	jtag_mm2: jtagmm@8fe000 {
+		compatible = "qcom,jtagv8-mm";
+		reg = <0x8fe000 0x1000>,
+		      <0x8f4000 0x1000>;
+		reg-names = "etm-base", "debug-base";
+
+		clocks = <&clock_rpm clk_qdss_clk>,
+		         <&clock_rpm clk_qdss_a_clk>;
+		clock-names = "core_clk", "core_a_clk";
+
+		qcom,coresight-jtagmm-cpu = <&CPU2>;
+	};
+
+	jtag_mm3: jtagmm@8ff000 {
+		compatible = "qcom,jtagv8-mm";
+		reg = <0x8ff000 0x1000>,
+		      <0x8f6000 0x1000>;
+		reg-names = "etm-base", "debug-base";
+
+		clocks = <&clock_rpm clk_qdss_clk>,
+		         <&clock_rpm clk_qdss_a_clk>;
+		clock-names = "core_clk", "core_a_clk";
+
+		qcom,coresight-jtagmm-cpu = <&CPU3>;
+	};
 
 	jtag_mm4: jtagmm@8dc000 {
 		compatible = "qcom,jtagv8-mm";
