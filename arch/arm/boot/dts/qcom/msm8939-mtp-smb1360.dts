@@ -44,6 +44,7 @@
 		qcom,fg-cutoff-voltage-mv = <3100>;
 		qcom,fg-iterm-ma = <80>;
 		qcom,batt-id-vref-uv = <1800000>;
+		qcom,fg-cc-to-cv-mv = <4350>;
 		qcom,batt-id-rpullup-kohm = <100>;
 		qcom,profile-a-rid-kohm = <324>;
 		qcom,profile-b-rid-kohm = <181>;
