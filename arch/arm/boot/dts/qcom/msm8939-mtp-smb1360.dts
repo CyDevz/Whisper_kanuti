@@ -33,7 +33,7 @@
 		qcom,empty-soc-disabled;
 		qcom,chg-inhibit-disabled;
 		qcom,float-voltage-mv = <4350>; //4200
-		qcom,iterm-ma = <100>; //200
+		qcom,iterm-ma = <25>; //200
 		qcom,recharge-thresh-mv = <200>; //100
 		qcom,fg-auto-recharge-soc = <99>;
 		qcom,thermal-mitigation = <1500 1000 850 0>;
