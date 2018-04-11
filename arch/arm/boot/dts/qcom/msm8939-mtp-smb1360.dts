@@ -39,7 +39,9 @@
 		qcom,thermal-mitigation = <1500 1000 850 0>;
 		regulator-name = "smb1360_otg_vreg";
 		qcom,batt-profile-select;
+		qcom,fg-batt-capacity-mah = <2400>;
 		qcom,smb1360-vadc = <&pm8916_vadc>;
+		qcom,fg-cutoff-voltage-mv = <3100>;
 		qcom,batt-id-vref-uv = <1800000>;
 		qcom,batt-id-rpullup-kohm = <100>;
 		qcom,profile-a-rid-kohm = <324>;
