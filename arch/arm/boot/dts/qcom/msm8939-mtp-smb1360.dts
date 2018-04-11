@@ -61,7 +61,7 @@
 
 &pm8916_bms {
 	status = "ok";
-	qcom,disable-bms;
+	qcom,enable-fcc-learning;
 };
 
 &usb_otg {
