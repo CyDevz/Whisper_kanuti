@@ -36,7 +36,7 @@
 		qcom,iterm-ma = <100>; //200
 		qcom,recharge-thresh-mv = <200>; //100
 		qcom,fg-auto-recharge-soc = <99>;
-		qcom,thermal-mitigation = <1500 850 750 0>;
+		qcom,thermal-mitigation = <1500 1000 850 0>;
 		regulator-name = "smb1360_otg_vreg";
 		qcom,batt-profile-select;
 		qcom,smb1360-vadc = <&pm8916_vadc>;
