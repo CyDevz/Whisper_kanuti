@@ -22,7 +22,7 @@
 		onnn,min-slew-ns = <416>;
 		onnn,max-slew-ns = <3333>;
 		regulator-min-microvolt = <1050000>;
-		regulator-max-microvolt = <1350000>;
+		regulator-max-microvolt = <1250000>;
 		onnn,min-setpoint = <600000>;
 		pintrl-names = "default";
 		pinctrl-0 = <&ext_buck_vsel_default>;
@@ -36,7 +36,7 @@
 		reg = <0x60>;
 		fairchild,backup-vsel = <1>;
 		regulator-min-microvolt = <1050000>;
-		regulator-max-microvolt = <1350000>;
+		regulator-max-microvolt = <1250000>;
 		regulator-ramp-delay = <1250>;
 		pintrl-names = "default";
 		pinctrl-0 = <&ext_buck_vsel_default>;
